@@ -26,7 +26,10 @@ const frontendDir = path.join(__dirname, "..", "..");
 app.use(express.static(frontendDir));
 
 app.get("/", (req, res) => {
-  res.sendFile(path.join(frontendDir, "Zeka.html"));
+  res.json({
+    status: "ok",
+    service: "zeka-game-lab-api"
+  });
 });
 
 // 4. Setup API Routes
