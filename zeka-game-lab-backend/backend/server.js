@@ -51,7 +51,9 @@ app.use((err, req, res, next) => {
   res.status(500).json({ error: "Terjadi kesalahan pada server." });
 });
 
-const PORT = process.env.PORT || 3000;
-app.listen(PORT, () => {
-  console.log(`Zeka Game Lab API jalan di port ${PORT}`);
-});
+// const PORT = process.env.PORT || 3000;
+// app.listen(PORT, () => {
+//   console.log(`Zeka Game Lab API jalan di port ${PORT}`);
+// });
+
+module.exports = app;
