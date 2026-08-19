@@ -7,10 +7,12 @@ const db = mysql.createPool({
   password: process.env.DB_PASSWORD,
   database: process.env.DB_NAME,
   port: process.env.DB_PORT,
-  // Tambahkan baris di bawah ini untuk melewati satpam Aiven!
   ssl: {
     rejectUnauthorized: false
   }
 });
 
-module.exports = db;
+// UBAH BAGIAN INI SAJA DI PALING BAWAH
+module.exports = {
+  getPool: () => db
+};
